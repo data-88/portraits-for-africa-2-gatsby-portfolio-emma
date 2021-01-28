@@ -6,7 +6,22 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
+    // Used for the title template on pages other than the index site
+    siteTitle: `Portraits for Africa`,
+    // Default title of the page
     siteTitleAlt: `Portraits for Africa`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Bringing out the best in you!`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://portraitsfor.africa`,
+    // Used for SEO
+    siteDescription: `Photography project to capture the beautiful people of the continent.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
@@ -24,9 +39,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portraits for Africa`,
-        short_name: `PFA`,
-        description: `Bringing out the best in you.`,
+        name: `Emma - @lekoarts/gatsby-theme-emma`,
+        short_name: `Emma`,
+        description: `Minimalistic bright portfolio with full-width grid and large images`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#b83280`,
